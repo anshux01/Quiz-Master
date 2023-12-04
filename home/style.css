@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+#animation-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#animated-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #1abc9c, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease, font-size 1s ease;
+}
+
+#content.visible h1 {
+    opacity: 1;
+    font-size: 2.5em;
+}
+
+#quiz-title {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#quiz-message {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+#participate-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#participate-button:hover {
+    background-color: #2980b9;
+}
+
+

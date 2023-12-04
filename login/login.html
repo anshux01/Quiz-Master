@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+</head>
+
+<body style="    background-color: rgb(79, 165, 202);">
+    <div id="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                title="Must contain at least 8 characters, one letter, one number, and one special character"
+                required>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile No.:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <p id="error-message" class="error-message"></p>
+
+            <button type="button" id="attempt-button">Attempt Quiz</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
