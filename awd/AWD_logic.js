@@ -406,10 +406,10 @@ const quiz = [
 
 document.addEventListener('DOMContentLoaded', () => {
     const question = document.querySelector('.question');
-    const option1 = document.querySelector('#option1');
-    const option2 = document.querySelector('#option2');
-    const option3 = document.querySelector('#option3');
-    const option4 = document.querySelector('#option4');
+    const option1 = document.querySelector('#A');
+    const option2 = document.querySelector('#B');
+    const option3 = document.querySelector('#C');
+    const option4 = document.querySelector('#D');
     const options = document.querySelector('.opt');
     const submit = document.querySelector('#submit');
     const homeButton = document.querySelector('#homeButton');
